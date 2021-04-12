@@ -1,5 +1,5 @@
 # SudokuGame
 Sudoku game implementation
 
-Author:
+Author:  
 Dominik Kasierski
