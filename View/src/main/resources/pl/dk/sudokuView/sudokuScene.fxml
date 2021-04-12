@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #838383;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.dk.sudokuView.SudokuSceneController">
+   <children>
+      <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="600.0" styleClass="tloMenuBar">
+        <menus>
+          <Menu mnemonicParsing="false" text="%file">
+            <items>
+              <MenuItem mnemonicParsing="false" text="%close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="%edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="%delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="%help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onActionButtonAuthors" text="%about" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="%language">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onActionButtonAngLangSudoku" text="%angielski" />
+                  <MenuItem mnemonicParsing="false" onAction="#onActionButtonPlLangSudoku" text="%polski" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <GridPane fx:id="sudokuGridPane" gridLinesVisible="true" layoutX="183.0" layoutY="33.0" prefHeight="357.0" prefWidth="411.0" stylesheets="@styles.css">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="40.0" prefWidth="52.0" styleClass="textField" stylesheets="@styles.css" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="1" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" style="-fx-border-width: 5;" styleClass="textField" GridPane.columnIndex="2" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="3" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="4" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="5" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="6" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="7" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="8" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.rowIndex="1" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.rowIndex="2" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.rowIndex="3" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.rowIndex="4" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.rowIndex="5" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.rowIndex="6" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.rowIndex="7" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.rowIndex="8" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+            <TextField alignment="CENTER" focusTraversable="false" prefHeight="44.0" prefWidth="38.0" styleClass="textField" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
+      <VBox layoutX="8.0" layoutY="33.0" prefHeight="357.0" prefWidth="169.0">
+         <children>
+            <Button fx:id="returnToMenu" mnemonicParsing="false" onAction="#changingScene" prefHeight="45.0" prefWidth="175.0" stylesheets="@styles.css" text="%backToMenu" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="newBoard" mnemonicParsing="false" onAction="#handleNewBoardButtonAction" prefHeight="35.0" prefWidth="179.0" text="%newBoard">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="save" disable="true" mnemonicParsing="false" onAction="#onActionButtonSave" prefHeight="35.0" prefWidth="179.0" text="%save">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onActionButtonLoad" prefHeight="35.0" prefWidth="179.0" text="%load">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="saveDataBase" disable="true" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onAction="#onActionButtonDatabaseSave" prefHeight="35.0" prefWidth="179.0" text="%saveDataBase">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="loadDataBase" disable="true" layoutX="10.0" layoutY="294.0" mnemonicParsing="false" onAction="#onActionButtonDatabaseLoad" prefHeight="35.0" prefWidth="179.0" text="%loadDataBase">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="check" disable="true" mnemonicParsing="false" onAction="#handleCheckButtonAction" prefHeight="35.0" prefWidth="179.0" text="%check">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+      <Line endX="457.29290771484375" endY="548.0" layoutX="-138.0" layoutY="-158.0" startX="457.29290771484375" startY="190.99998474121094" strokeWidth="2.0" />
+      <Line endX="429.0" endY="267.5" layoutX="-245.0" layoutY="-114.0" startX="838.2928466796875" startY="267.5" strokeWidth="2.0" />
+      <Line endX="337.0" endY="523.0" layoutX="-154.0" layoutY="-133.0" startX="337.0" startY="166.0" strokeWidth="3.0" />
+      <Line endX="792.0000610351562" endY="199.99998474121094" layoutX="-198.0" layoutY="-167.0" startX="381.0" startY="200.0" strokeWidth="3.0" />
+      <Line endX="602.5000610351562" endY="181.7071075439453" layoutX="-146.0" layoutY="-148.0" startX="602.5" startY="538.0" strokeWidth="2.0" />
+      <Line endX="260.5" endY="557.5" layoutX="-77.0" layoutY="-167.0" startX="671.0000610351562" startY="557.0" strokeWidth="3.0" />
+      <Line endX="802.7071533203125" endY="220.70709228515625" layoutX="-208.0" layoutY="-187.0" startX="802.7070922851562" startY="576.2929077148438" strokeWidth="3.0" />
+      <Line endX="100.0" layoutX="-163.0" layoutY="-170.0" startX="-100.0" />
+      <Line endX="276.5" endY="443.5" layoutX="-93.0" layoutY="-171.0" startX="688.5" startY="443.5" strokeWidth="2.0" />
+   </children>
+</AnchorPane>
